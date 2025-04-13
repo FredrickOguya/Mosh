@@ -1,7 +1,7 @@
 command = ""
 
 while command.lower() != "stop":
-    command.lower()= input(">")
+    command = input(">").lower()
     if command == "start":
         print("Car started...")
     elif command == "stop":
