@@ -3,4 +3,4 @@ total = 0
 for price in prices:
     total += price
 
-print(total)
+print(f"total: {total}")
