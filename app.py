@@ -1,7 +1,3 @@
-numbers = [5, 2, 5, 2, 2]
-
-for number in numbers:
-    output = ''
-    for count in range(number):
-        output+='X'
-    print(output)
+names = ['John', 'Bob', 'Mosh', 'Sarah', 'Mary']
+names[0]= 'Fred'
+print(names)
