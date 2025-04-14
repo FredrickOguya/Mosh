@@ -1,5 +1,6 @@
 command = ""
 
+
 while command.lower() != "stop":
     command = input(">").lower()
     if command == "start":
