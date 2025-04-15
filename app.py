@@ -1,7 +1,6 @@
-numbers = [2,4,5,4,7,8,9,2,1,11,23,1,0]
+from utils import find_max
 
-largest = 0
-for number in numbers:
-    if number > largest:
-        largest = number
-print(f"largest number is {largest}")
+numbers = [10, 3, 6, 2]
+maximum = find_max(numbers)
+
+print(max(numbers))
