@@ -1,20 +1,4 @@
-class Mammal:
-    def walk(self):
-        print("walk")
+import converters
+from converters import kg_to_lbs
 
-
-class Dog(Mammal):
-    def bark(self):
-        print("bark")
-
-
-class Cat(Mammal):
-    def be_annoying(self):
-        print("annoying")
-
-dog1 = Dog()
-dog1.bark()
-dog1.walk()
-
-cat1 = Cat()
-cat1.be_annoying()
+print(kg_to_lbs(70))
