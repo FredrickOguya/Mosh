@@ -1,14 +1,20 @@
-class Person:
-    def __init__(self,name):
-        self.name = name
+class Mammal:
+    def walk(self):
+        print("walk")
 
-    def talk(self):
-        print(f"Hi, I am {self.name}")
 
-john = Person("John Smith")
+class Dog(Mammal):
+    def bark(self):
+        print("bark")
 
-print(john.name)
 
-bob = Person("Bob Smith")
+class Cat(Mammal):
+    def be_annoying(self):
+        print("annoying")
 
-bob.talk()
+dog1 = Dog()
+dog1.bark()
+dog1.walk()
+
+cat1 = Cat()
+cat1.be_annoying()
