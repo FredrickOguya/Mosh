@@ -1,9 +1,9 @@
-import random
+from pathlib import Path
 
-for i in range(3):
-    print(random.randint(10,20))
+path = Path()
 
-members = ["John", 'Mary', 'Bob', 'Mosh']
-
-leader= random.choice(members)
-print(leader)
+#print(path.exists())
+#print(path.mkdir())
+#print(path.rmdir())
+for file in path.glob('* '):
+    print(file)
