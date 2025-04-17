@@ -1,5 +1,4 @@
-from utils import find_max
+from ecommerce import shipping
 
-values = [10, 3, 6, 2]
+shipping.calc_shipping()
 
-print(find_max(numbers=values))
