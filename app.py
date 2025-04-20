@@ -1,11 +1,7 @@
-def fizz_buzz(input):
-    if (input % 3 == 0) and (input % 5 == 0):
-        return "fizz_buzz"
-    if input % 3 ==0:
-        return "fizz"
-    if input % 5 == 0:
-        return "buzz"
-    return input
-
-
-print(fizz_buzz())
+letters = ["a", "b", "c"]
+matrix = [[0,1], [2,3]]
+zeros = [0] * 5 
+combined = zeros + letters
+numbers = list(range(20))
+chars = list("Hello World")
+print(len(chars))
