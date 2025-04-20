@@ -1,7 +1,8 @@
 letters = ["a", "b", "c"]
-matrix = [[0,1], [2,3]]
-zeros = [0] * 5 
-combined = zeros + letters
+letters[0] = "A"
+print(letters[-1])
+print(letters[0:3])
+print(letters)
+
 numbers = list(range(20))
-chars = list("Hello World")
-print(len(chars))
+print(numbers[::-1])
