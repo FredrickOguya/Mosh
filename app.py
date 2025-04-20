@@ -1,8 +1,12 @@
-letters = ["a", "b", "c"]
-letters[0] = "A"
-print(letters[-1])
-print(letters[0:3])
-print(letters)
+numbers = [1,2,3,4,5,6,8,9,7]
 
-numbers = list(range(20))
-print(numbers[::-1])
+# first, second , third = numbers
+# first, second , *other = numbers
+
+first, *other , last = numbers
+
+print(first)
+print(other)
+print(last)
+
+    
