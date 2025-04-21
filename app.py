@@ -1,8 +1,10 @@
-# point = (1, 2,)  + (3, 4)
-# point = tuple([1, 2])
-# point = (1, 2,)  * 3 
-# point = tuple("Hello World")
-point = (1, 2, 3)
-print([point[0:2]])
+x = 10
+y= 11
 
-print(point)
+# z=x
+# x=y
+# y=z
+
+x,y = y,x
+print("x", x)
+print("y" ,y)
