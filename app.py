@@ -1,17 +1,6 @@
-point = {"x":1, "y":2}
-point = dict(x=1,y=2)
-point["x"]= 10
-point["z"] = 20
+# values = []
+# for x in range(5):
+#     values.append(x * 2)
 
-if "a" in point:
-    print(point)
-
-print(point.get("a",0))
-del point["x"]
-print(point) 
-
-for key in point:
-    print(key, point[key])
-
-for key,value in point.items():
-    print(key,value)
+values = {x:x * 2 for x in range(5)}
+print(values)
