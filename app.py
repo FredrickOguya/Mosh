@@ -1,6 +1,17 @@
-from array import array
+numbers = [1, 1, 2, 3, 4]
+# uniques = set(numbers)
+# second = {1,4}
+# second.add(5)
+# second.remove(5)
+# len(second)
+# print(uniques)
+first = set(numbers)
+second = {1, 5}
 
-numbers = array("i",[1, 2, 3])
-numbers[0] = 8
+print(first | second)
+print(first & second)
+print(first - second)
+print(first ^ second)
 
-
+if 1 in first:
+    print("Yes")
