@@ -1,10 +1,6 @@
-x = 10
-y= 11
+from array import array
 
-# z=x
-# x=y
-# y=z
+numbers = array("i",[1, 2, 3])
+numbers[0] = 8
 
-x,y = y,x
-print("x", x)
-print("y" ,y)
+
