@@ -1,17 +1,17 @@
-numbers = [1, 1, 2, 3, 4]
-# uniques = set(numbers)
-# second = {1,4}
-# second.add(5)
-# second.remove(5)
-# len(second)
-# print(uniques)
-first = set(numbers)
-second = {1, 5}
+point = {"x":1, "y":2}
+point = dict(x=1,y=2)
+point["x"]= 10
+point["z"] = 20
 
-print(first | second)
-print(first & second)
-print(first - second)
-print(first ^ second)
+if "a" in point:
+    print(point)
 
-if 1 in first:
-    print("Yes")
+print(point.get("a",0))
+del point["x"]
+print(point) 
+
+for key in point:
+    print(key, point[key])
+
+for key,value in point.items():
+    print(key,value)
