@@ -1,9 +1,4 @@
-items = [
-    ("product1", 10),
-    ("product2", 9),
-    ("product3", 12)
-]
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
 
-
-prices = [item[1] for item in items]
-print(prices)
+print(list(zip("abc",list1,list2)))
