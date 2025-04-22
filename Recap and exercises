@@ -1,28 +1,38 @@
-# 🧠 Exercise
-# Try this:
+# 🧠 Practice Task
+# Using this list:
 
-# Create a list of five student names.
+# python
+# Copy code
+# students = ["Fred", "Kelvin", "Rose", "Vivian", "Brian"]
+# Do the following in order:
 
-# Loop over the list using:
+# Add "Alice" at the end.
 
-# A simple for loop.
+# Insert "Liam" at index 2.
 
-# range(len(...)) method.
+# Add "Mark" and "Diana" using extend().
 
-# enumerate() method.
+# Remove "Rose" from the list.
 
-# In each loop, print the index and name.
+# Remove and print the last student using pop().
 
-# Send me your code when ready and we’ll continue to adding/removing items after review!
+# Remove the student at index 1 using pop(index).
+
+# Print the final list.
 
 
-students = ["fred", "Kelvin", "Rose", "Vivian", "Brian"]
 
-for student in students:
-    print(f"student at index {students.index(student)} is {student}")
 
-for i in range(len(students)):
-    print(f"student at index {i} is {students[i]}")
+students = ["Fred", "Kelvin", "Rose", "Vivian", "Brian"]
 
-for index, student in enumerate(students):
-    print(f"student at index {index} is {student}")
+students.append("Alice")
+
+students.insert(2,"Liam")
+
+students.extend(["Mark","Diana"])
+
+students.pop(students.index("Rose"))
+
+students.pop(1)
+
+print(students)
