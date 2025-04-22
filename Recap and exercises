@@ -1,6 +1,10 @@
-# Create a lambda that multiplies a number by 10 and test it with 7.
+# Sort this list by the second character in each name:
 
-multiply_by_ten = lambda x:x*10
 
-print(multiply_by_ten(7))
+names = ['Eve', 'Anna', 'Ian', 'Eric', 'Omar']
+
+names.sort(key= lambda name:name[len(name)-2])
+
+print(names)
+
 
