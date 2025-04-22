@@ -1,13 +1,17 @@
-# numbers = [1, 2, 3]
-# print(*numbers)
-# print(1, 2, 3)
+from pprint import pprint
 
-first = {"x":1}
-second = {"x":10, "y":2}
-combined = {**first,**second,"z":1 }
-# second = [3]
+sentence = "This is a common interview questions"
 
-# values= [*first, "a", *second, *"Hello"]
-# values = list(range(5))
-# values = [*range(5), *"Hello"]
-print(combined)
+char_frequency = {}
+
+for char in sentence:
+    if char in char_frequency:
+        char_frequency[char] += 1
+    else:
+        char_frequency[char] = 1
+
+char_frequency_sorted = sorted(char_frequency.items(), 
+                               key=lambda kv:kv[1],
+                               reverse=True)
+
+print(char_frequency_sorted[0])
