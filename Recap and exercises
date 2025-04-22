@@ -1,29 +1,28 @@
-# Try these on your own:
+# 🧠 Exercise
+# Try this:
 
-# Create a new list of 5 animals.
+# Create a list of five student names.
 
-# Add a new animal to the end.
+# Loop over the list using:
 
-# Insert an animal at position 2.
+# A simple for loop.
 
-# Remove an animal by name.
+# range(len(...)) method.
 
-# Sort the list.
+# enumerate() method.
 
-# Reverse the sorted list.
+# In each loop, print the index and name.
 
-# Print the index of a specific animal.
+# Send me your code when ready and we’ll continue to adding/removing items after review!
 
-animals = ["cow", "cat" , "goat", "sheep", "Donkey"]
 
-animals.append("Rabbit")
+students = ["fred", "Kelvin", "Rose", "Vivian", "Brian"]
 
-animals.insert(1,"Hen")
+for student in students:
+    print(f"student at index {students.index(student)} is {student}")
 
-animals.remove("goat")
+for i in range(len(students)):
+    print(f"student at index {i} is {students[i]}")
 
-animals.sort()
-
-animals.reverse()
-
-print(animals.index("cat"))
+for index, student in enumerate(students):
+    print(f"student at index {index} is {student}")
