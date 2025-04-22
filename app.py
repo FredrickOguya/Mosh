@@ -1,15 +1,13 @@
-from sys import getsizeof
+# numbers = [1, 2, 3]
+# print(*numbers)
+# print(1, 2, 3)
 
-values = (x * 2 for x in range(1000))
+first = {"x":1}
+second = {"x":10, "y":2}
+combined = {**first,**second,"z":1 }
+# second = [3]
 
-print("gen: ",getsizeof(values))
-
-values = [x * 2 for x in range(100000)]
-print("list:",getsizeof(values))
-
-
-
-# print(values)
-
-# for x in values:
-#     print(x)
+# values= [*first, "a", *second, *"Hello"]
+# values = list(range(5))
+# values = [*range(5), *"Hello"]
+print(combined)
