@@ -1,16 +1,29 @@
-cities = ["Nairobi","Mombasa","Nakuru","Kisumu"]
+# Try these on your own:
 
-second = cities[1]
-print(second)
+# Create a new list of 5 animals.
 
-last = cities[len(cities)-1]
-print(last)
+# Add a new animal to the end.
 
-first_three_cities = cities[:3]
-print(first_three_cities)
+# Insert an animal at position 2.
 
-first_city,*middle_cities,last_city = cities
+# Remove an animal by name.
 
-print(first_city)
-print(middle_cities)
-print(last_city)
+# Sort the list.
+
+# Reverse the sorted list.
+
+# Print the index of a specific animal.
+
+animals = ["cow", "cat" , "goat", "sheep", "Donkey"]
+
+animals.append("Rabbit")
+
+animals.insert(1,"Hen")
+
+animals.remove("goat")
+
+animals.sort()
+
+animals.reverse()
+
+print(animals.index("cat"))
