@@ -1,44 +1,22 @@
-# Use this list:
-
-# python
-# Copy code
-# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
-# Do the following:
-
-# Check if "Brian" is in the list.
-
-# Check if "George" is in the list.
-
-# Find the index of "Alice".
-
-# Task for you:
+# 🧠 Practice Task
 # Using this list:
 
 # python
 # Copy code
-# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
-# Write code that:
+# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana', 'Liam']
+# Find and print the index of "Mark".
 
-# Finds all students whose names start with "D".
+# Try to find the index of "George" and handle the case where it’s not found.
 
-# Stores them in a new list.
+# Count how many times "Liam" appears and print it.
 
-# Prints that list.
+students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana', 'Liam']
 
-# When you’re done, share your code!
+index_of_mark  = students.index("Mark")
 
-students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
+try:
+    print(students.index("George"))
+except ValueError:
+        print("George is not found")
 
-print("Brian" in students)
-
-print("George" in students)
-
-print("Alice" in students)
-
-
-new_list = []
-for student in students:
-    if student.startswith("D"):
-        new_list.append(student)
-
-print(new_list)
+print(students.count("Liam"))
