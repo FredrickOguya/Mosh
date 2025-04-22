@@ -1,5 +1,3 @@
-# Create a lambda that returns 'Even' if a number is even, and 'Odd' otherwise.
+first_vowel = lambda name: next((ch for ch in name if ch.lower() in 'aeiou'),'No vowel')
 
-even_or_odd = lambda x : "even" if x%2==0  else "odd"
-
-print(even_or_odd(4))
+print(first_vowel("Fredrick"))
