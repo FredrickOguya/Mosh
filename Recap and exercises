@@ -1,38 +1,44 @@
-# 🧠 Practice Task
+# Use this list:
+
+# python
+# Copy code
+# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
+# Do the following:
+
+# Check if "Brian" is in the list.
+
+# Check if "George" is in the list.
+
+# Find the index of "Alice".
+
+# Task for you:
 # Using this list:
 
 # python
 # Copy code
-# students = ["Fred", "Kelvin", "Rose", "Vivian", "Brian"]
-# Do the following in order:
+# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
+# Write code that:
 
-# Add "Alice" at the end.
+# Finds all students whose names start with "D".
 
-# Insert "Liam" at index 2.
+# Stores them in a new list.
 
-# Add "Mark" and "Diana" using extend().
+# Prints that list.
 
-# Remove "Rose" from the list.
+# When you’re done, share your code!
 
-# Remove and print the last student using pop().
+students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
 
-# Remove the student at index 1 using pop(index).
+print("Brian" in students)
 
-# Print the final list.
+print("George" in students)
+
+print("Alice" in students)
 
 
+new_list = []
+for student in students:
+    if student.startswith("D"):
+        new_list.append(student)
 
-
-students = ["Fred", "Kelvin", "Rose", "Vivian", "Brian"]
-
-students.append("Alice")
-
-students.insert(2,"Liam")
-
-students.extend(["Mark","Diana"])
-
-students.pop(students.index("Rose"))
-
-students.pop(1)
-
-print(students)
+print(new_list)
