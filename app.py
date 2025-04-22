@@ -1,6 +1,15 @@
-# values = []
-# for x in range(5):
-#     values.append(x * 2)
+from sys import getsizeof
 
-values = {x:x * 2 for x in range(5)}
-print(values)
+values = (x * 2 for x in range(1000))
+
+print("gen: ",getsizeof(values))
+
+values = [x * 2 for x in range(100000)]
+print("list:",getsizeof(values))
+
+
+
+# print(values)
+
+# for x in values:
+#     print(x)
