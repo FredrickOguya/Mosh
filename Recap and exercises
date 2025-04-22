@@ -1,22 +1,11 @@
-# 🧠 Practice Task
-# Using this list:
+students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
 
-# python
-# Copy code
-# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana', 'Liam']
-# Find and print the index of "Mark".
+#students.sort()
 
-# Try to find the index of "George" and handle the case where it’s not found.
+print(students)
 
-# Count how many times "Liam" appears and print it.
+print(sorted(students))
 
-students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana', 'Liam']
+students.sort(reverse=True)
 
-index_of_mark  = students.index("Mark")
-
-try:
-    print(students.index("George"))
-except ValueError:
-        print("George is not found")
-
-print(students.count("Liam"))
+print(students)
