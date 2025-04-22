@@ -1,15 +1,6 @@
-# 🧠 Practice Task
-# Use this list:
+# Create a lambda that multiplies a number by 10 and test it with 7.
 
-# python
-# Copy code
-# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
-# Sort the list by length of the names (shortest to longest).
+multiply_by_ten = lambda x:x*10
 
-# Print the longest name using max() and a lambda.
+print(multiply_by_ten(7))
 
-students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
-
-students.sort(key= lambda name:len(name))
-
-print(max(students,key= lambda student:len(student)))
