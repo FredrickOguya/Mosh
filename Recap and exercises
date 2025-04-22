@@ -1,11 +1,15 @@
+# 🧠 Practice Task
+# Use this list:
+
+# python
+# Copy code
+# students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
+# Sort the list by length of the names (shortest to longest).
+
+# Print the longest name using max() and a lambda.
+
 students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice', 'Mark', 'Diana']
 
-#students.sort()
+students.sort(key= lambda name:len(name))
 
-print(students)
-
-print(sorted(students))
-
-students.sort(reverse=True)
-
-print(students)
+print(max(students,key= lambda student:len(student)))
