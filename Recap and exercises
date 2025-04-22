@@ -1,0 +1,16 @@
+cities = ["Nairobi","Mombasa","Nakuru","Kisumu"]
+
+second = cities[1]
+print(second)
+
+last = cities[len(cities)-1]
+print(last)
+
+first_three_cities = cities[:3]
+print(first_three_cities)
+
+first_city,*middle_cities,last_city = cities
+
+print(first_city)
+print(middle_cities)
+print(last_city)
