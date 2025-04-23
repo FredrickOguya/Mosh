@@ -12,3 +12,8 @@ lowercased = map(lambda student: student.lower(),students)
 
 print(list(lowercased))
 
+#use map() to return a list like "Fred has 4 letters", "Liam has 4 letters"
+
+sentence_return = list(map(lambda student: f"{student} has {len(student)} letters",students))
+
+print(sentence_return)
