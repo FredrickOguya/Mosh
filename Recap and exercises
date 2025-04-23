@@ -1,19 +1,11 @@
-# 1. 🎯 Create a list of even numbers from 0 to 20
+# 🎯 Problem:
+# You’re given a list of temperatures in Celsius:
 
-even = [ x for x in range(20) if x%2==0]
 
-print(even)
+temps_c = [0, 20, 37, 100]
+# Use a list comprehension to convert them to Fahrenheit
+# 📌 Formula: F = (C * 9/5) + 32
 
-# 2. 🧠 Create a list of names in uppercase
+temps_F = [(C * 9/5)+32 for C in temps_c]
 
-names = ['Fred', 'Liam', 'Alice']
-
-uppercase = [name.upper() for name in names]
-
-print(uppercase)
-
-# 3. 🔤 Get only names that start with "A" or "F"
-
-name_starters = [name for name in names if name[0].lower()=='a' or name[0].lower() == 'f']
-
-print(name_starters)
+print(temps_F)
