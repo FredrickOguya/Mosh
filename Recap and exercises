@@ -1,19 +1,20 @@
-# Create a map() that returns the length of each name.
+# 🧠 Challenge 1: Add "Mr./Ms." Titles
+# Given this list:
 
-students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice']
+names = ['John', 'Mary', 'Alex', 'Grace']
+# Create a map() function that returns:
 
-name_length = map(lambda student:len(student),students)
+['Mr. John', 'Ms. Mary', 'Mr. Alex', 'Ms. Grace']
+# 💡 Rule:
 
-print(list(name_length))
+# Use "Mr." if the name starts with a consonant
 
-#create another map() that turns all names into lowercase
+# Use "Ms." if the name starts with a vowel (a, e, i, o, u)
 
-lowercased = map(lambda student: student.lower(),students)
 
-print(list(lowercased))
+titled = map(
+    lambda name: "Ms. " + name if name[0].lower() in 'aeiou' else "mr. " + name,
+    names
+)
 
-#use map() to return a list like "Fred has 4 letters", "Liam has 4 letters"
-
-sentence_return = list(map(lambda student: f"{student} has {len(student)} letters",students))
-
-print(sentence_return)
+print(list(titled))
