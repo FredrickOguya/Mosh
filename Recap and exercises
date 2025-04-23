@@ -1,27 +1,5 @@
-# You’re given a list of student scores, and you want to convert them to grade categories:
+# 1. 🎯 Create a list of even numbers from 0 to 20
 
-# python
-# Copy code
-scores = [82, 59, 91, 47, 76, 64]
-# 🎯 Goal:
-# Use map() and a lambda to return:
+even = [ x for x in range(20) if x%2==0]
 
-
-# ['B', 'D', 'A', 'F', 'C', 'C']
-# 📋 Grading Scale:
-# A = 90 and above
-
-# B = 80–89
-
-# C = 70–79
-
-# D = 60–69
-
-# F = below 60
-
-graded = map(
-    lambda score: "A" if score>89 else 'B' if score> 79 and score< 90 else 'C' if score > 69 and score < 80 else 'D' if score > 59 and score < 70 else 'F' if score < 60 else "input correct marks"
-    ,scores
-    )
-
-print(list(graded))
+print(even)
