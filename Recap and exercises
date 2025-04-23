@@ -1,20 +1,18 @@
-# 🧠 Challenge 1: Add "Mr./Ms." Titles
-# Given this list:
+# 🧠 Challenge 2: Convert Temperatures
+# Given this list of Celsius temperatures:
 
-names = ['John', 'Mary', 'Alex', 'Grace']
-# Create a map() function that returns:
-
-['Mr. John', 'Ms. Mary', 'Mr. Alex', 'Ms. Grace']
-# 💡 Rule:
-
-# Use "Mr." if the name starts with a consonant
-
-# Use "Ms." if the name starts with a vowel (a, e, i, o, u)
+temps_c = [0, 20, 37, 100]
+# Use map() and a lambda to convert them to Fahrenheit:
 
 
-titled = map(
-    lambda name: "Ms. " + name if name[0].lower() in 'aeiou' else "mr. " + name,
-    names
-)
+# F = (C * 9/5) + 32
+# Expected output:
 
-print(list(titled))
+# python
+# Copy code
+# [32.0, 68.0, 98.6, 212.0]
+
+
+temp_Far = map(lambda C: (C*9/5)+32,temps_c )
+
+print(list(temp_Far))
