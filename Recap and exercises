@@ -1,3 +1,8 @@
-first_vowel = lambda name: next((ch for ch in name if ch.lower() in 'aeiou'),'No vowel')
+# Create a map() that returns the length of each name.
 
-print(first_vowel("Fredrick"))
+students = ['Fred', 'Liam', 'Vivian', 'Brian', 'Alice']
+
+name_length = map(lambda student:len(student),students)
+
+print(list(name_length))
+
