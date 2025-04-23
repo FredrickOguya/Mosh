@@ -11,3 +11,9 @@ names = ['Fred', 'Liam', 'Alice']
 uppercase = [name.upper() for name in names]
 
 print(uppercase)
+
+# 3. 🔤 Get only names that start with "A" or "F"
+
+name_starters = [name for name in names if name[0].lower()=='a' or name[0].lower() == 'f']
+
+print(name_starters)
