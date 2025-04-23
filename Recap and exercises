@@ -3,3 +3,11 @@
 even = [ x for x in range(20) if x%2==0]
 
 print(even)
+
+# 2. 🧠 Create a list of names in uppercase
+
+names = ['Fred', 'Liam', 'Alice']
+
+uppercase = [name.upper() for name in names]
+
+print(uppercase)
