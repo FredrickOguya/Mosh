@@ -6,3 +6,9 @@ name_length = map(lambda student:len(student),students)
 
 print(list(name_length))
 
+#create another map() that turns all names into lowercase
+
+lowercased = map(lambda student: student.lower(),students)
+
+print(list(lowercased))
+
