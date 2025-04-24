@@ -1,5 +1,5 @@
 # 🧠 Challenge: Grade Summary with Conditions
-# You're given:
+# You"re given:
 
 # students = ["Fred", "Liam", "Alice", "Brian"]
 # scores = [92, 67, 85, 43]
@@ -30,16 +30,17 @@
 students = ["Fred", "Liam", "Alice", "Brian"]
 scores = [92, 67, 85, 43]
 
-grades = list(map(lambda score:
-                        'A' if score > 89 and score <101 else
-                        'B' if score > 79 and score < 90 else
-                        'C' if score > 69 and score < 80 else
-                        'D' if score > 59 and score < 70 else
-                        'F' if score < 60 else 
-                        'Invalid scores' ,scores))
 
-combined = list(zip(students,grades))
-
-output = [f"{students} got {grades}" for students,grades in combined]
+output = [f"{student} got " + 
+          (
+              "A" if score >= 90 else
+              "B" if score >= 80 else
+              "C" if score >= 70 else 
+              "E" if score >= 60 else
+              "F" 
+          ) for student,score in list(zip(students,scores))
+          ]
+        
+        
 
 print(output)
