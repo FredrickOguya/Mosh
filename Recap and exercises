@@ -1,33 +1,31 @@
-# 🧠 Challenge: Team Role Assignment
-# You're given:
+# 🧠 Challenge: Combine Book Details
+# You're given three lists:
 
 # python
 # Copy code
-# team_members = ["Fred", "Liam", "Alice", "Brian"]
-# roles = ["Leader", "Developer", "Designer", "Tester"]
-# workload = [8, 6, 5, 3]  # In hours per day
+# titles = ["1984", "To Kill a Mockingbird", "The Great Gatsby"]
+# authors = ["George Orwell", "Harper Lee", "F. Scott Fitzgerald"]
+# years = [1949, 1960, 1925]
 # 🎯 Goal:
 # Use zip() and a list comprehension to generate the following formatted list:
 
 # python
 # Copy code
-# ["Fred is the Leader and works 8h/day", 
-#  "Liam is the Developer and works 6h/day", 
-#  "Alice is the Designer and works 5h/day", 
-#  "Brian is the Tester and works 3h/day"]
+# [
+#   "1984 by George Orwell (1949)",
+#   "To Kill a Mockingbird by Harper Lee (1960)",
+#   "The Great Gatsby by F. Scott Fitzgerald (1925)"
+# ]
 # 🔧 Hints:
-# Zip all three lists together.
+# Zip the three lists together.
 
-# Use a list comprehension.
+# Use an f-string inside the list comprehension.
 
-# Use an f-string for formatting.
+titles = ["1984", "To Kill a Mockingbird", "The Great Gatsby"]
+authors = ["George Orwell", "Harper Lee", "F. Scott Fitzgerald"]
+years = [1949, 1960, 1925]
 
-team_members = ["Fred", "Liam", "Alice", "Brian"]
-roles = ["Leader", "Developer", "Designer", "Tester"]
-workload = [8, 6, 5, 3]  # In hours per day
 
-combined = zip(team_members,roles,workload)
-
-output = [f"{members} is the {role} and works {time}h/day" for members,role,time in combined]
+output=[f"{title} by {writer} ({year})" for title, writer,year in zip(titles,authors,years)]
 
 print(output)
