@@ -1,24 +1,26 @@
-# Try this challenge:
+# 🎯 Problem:
+# You’re given two lists:
 
-# students = ['Fred', 'Liam', 'Alice']
-# grades = ['B', 'A', 'C']
-# Use zip() to:
-
-# Combine them into pairs
-
-students = ['Fred', 'Liam', 'Alice']
-grades = ['B', 'A', 'C']
-
-combined = list(zip(students,grades))
-
-print(combined)
-
-# Then, use a list comprehension to turn them into strings like:
+# products = ["Apples", "Oranges", "Bananas"]
+# prices = [120, 80, 100]
+# Use zip() and a list comprehension to produce:
 
 # python
 # Copy code
-# ["Fred got B", "Liam got A", "Alice got C"]
+# ["Apples cost 120", "Oranges cost 80", "Bananas cost 100"]
+# ✅ Your task:
 
-sentence = [f"{student} got {grade} "for student,grade in combined]
+# Use zip() to combine products and prices.
 
-print(sentence)
+# Use a list comprehension to build the final list.
+
+ # Give it a try
+
+products = ["Apples", "Oranges", "Bananas"]
+prices = [120, 80, 100]
+
+combined = list(zip(products,prices))
+
+final_list = [f"{product} costs {price}"for product,price in combined]
+
+print(final_list)
