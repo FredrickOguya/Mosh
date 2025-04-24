@@ -1,26 +1,28 @@
-# 🎯 Problem:
-# You’re given two lists:
+# 🧠 Challenge: Match Students to Subjects and Scores
+# You're given three lists:
 
-# products = ["Apples", "Oranges", "Bananas"]
-# prices = [120, 80, 100]
-# Use zip() and a list comprehension to produce:
+# students = ["Fred", "Liam", "Alice"]
+# subjects = ["Math", "Science", "English"]
+# scores = [75, 88, 92]
+# 🎯 Goal:
+# Use zip() and a list comprehension to produce this:
 
 # python
 # Copy code
-# ["Apples cost 120", "Oranges cost 80", "Bananas cost 100"]
-# ✅ Your task:
+# ["Fred scored 75 in Math", "Liam scored 88 in Science", "Alice scored 92 in English"]
+# 🔧 Steps:
+# Zip the three lists together.
 
-# Use zip() to combine products and prices.
+# Use a list comprehension to generate the desired sentences.
 
-# Use a list comprehension to build the final list.
+# Your turn!
 
- # Give it a try
+students = ["Fred", "Liam", "Alice"]
+subjects = ["Math", "Science", "English"]
+scores = [75, 88, 92]
 
-products = ["Apples", "Oranges", "Bananas"]
-prices = [120, 80, 100]
+combined = list(zip(students,scores,subjects))
 
-combined = list(zip(products,prices))
+output = [f"{student} scored {score} in {subject}" for student, score, subject in combined]
 
-final_list = [f"{product} costs {price}"for product,price in combined]
-
-print(final_list)
+print(output)
