@@ -1,46 +1,33 @@
-# 🧠 Challenge: Grade Summary with Conditions
-# You"re given:
-
-# students = ["Fred", "Liam", "Alice", "Brian"]
-# scores = [92, 67, 85, 43]
-# 🎯 Goal:
-# Use zip() and a list comprehension to generate:
+# 🧠 Challenge: Team Role Assignment
+# You're given:
 
 # python
 # Copy code
-# ["Fred got A", "Liam got D", "Alice got B", "Brian got F"]
-# 📋 Grading Scale:
-# A = 90 and above
+# team_members = ["Fred", "Liam", "Alice", "Brian"]
+# roles = ["Leader", "Developer", "Designer", "Tester"]
+# workload = [8, 6, 5, 3]  # In hours per day
+# 🎯 Goal:
+# Use zip() and a list comprehension to generate the following formatted list:
 
-# B = 80–89
-
-# C = 70–79
-
-# D = 60–69
-
-# F = below 60
-
+# python
+# Copy code
+# ["Fred is the Leader and works 8h/day", 
+#  "Liam is the Developer and works 6h/day", 
+#  "Alice is the Designer and works 5h/day", 
+#  "Brian is the Tester and works 3h/day"]
 # 🔧 Hints:
-# Zip students and scores.
+# Zip all three lists together.
 
-# Inside the list comprehension, use conditional logic to assign grades.
+# Use a list comprehension.
 
-# Use f-strings to format the final message.
+# Use an f-string for formatting.
 
-students = ["Fred", "Liam", "Alice", "Brian"]
-scores = [92, 67, 85, 43]
+team_members = ["Fred", "Liam", "Alice", "Brian"]
+roles = ["Leader", "Developer", "Designer", "Tester"]
+workload = [8, 6, 5, 3]  # In hours per day
 
+combined = zip(team_members,roles,workload)
 
-output = [f"{student} got " + 
-          (
-              "A" if score >= 90 else
-              "B" if score >= 80 else
-              "C" if score >= 70 else 
-              "E" if score >= 60 else
-              "F" 
-          ) for student,score in list(zip(students,scores))
-          ]
-        
-        
+output = [f"{members} is the {role} and works {time}h/day" for members,role,time in combined]
 
 print(output)
