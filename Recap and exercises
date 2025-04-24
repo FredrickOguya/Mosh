@@ -1,28 +1,45 @@
-# 🧠 Challenge: Match Students to Subjects and Scores
-# You're given three lists:
+# 🧠 Challenge: Grade Summary with Conditions
+# You're given:
 
-# students = ["Fred", "Liam", "Alice"]
-# subjects = ["Math", "Science", "English"]
-# scores = [75, 88, 92]
+# students = ["Fred", "Liam", "Alice", "Brian"]
+# scores = [92, 67, 85, 43]
 # 🎯 Goal:
-# Use zip() and a list comprehension to produce this:
+# Use zip() and a list comprehension to generate:
 
 # python
 # Copy code
-# ["Fred scored 75 in Math", "Liam scored 88 in Science", "Alice scored 92 in English"]
-# 🔧 Steps:
-# Zip the three lists together.
+# ["Fred got A", "Liam got D", "Alice got B", "Brian got F"]
+# 📋 Grading Scale:
+# A = 90 and above
 
-# Use a list comprehension to generate the desired sentences.
+# B = 80–89
 
-# Your turn!
+# C = 70–79
 
-students = ["Fred", "Liam", "Alice"]
-subjects = ["Math", "Science", "English"]
-scores = [75, 88, 92]
+# D = 60–69
 
-combined = list(zip(students,scores,subjects))
+# F = below 60
 
-output = [f"{student} scored {score} in {subject}" for student, score, subject in combined]
+# 🔧 Hints:
+# Zip students and scores.
+
+# Inside the list comprehension, use conditional logic to assign grades.
+
+# Use f-strings to format the final message.
+
+students = ["Fred", "Liam", "Alice", "Brian"]
+scores = [92, 67, 85, 43]
+
+grades = list(map(lambda score:
+                        'A' if score > 89 and score <101 else
+                        'B' if score > 79 and score < 90 else
+                        'C' if score > 69 and score < 80 else
+                        'D' if score > 59 and score < 70 else
+                        'F' if score < 60 else 
+                        'Invalid scores' ,scores))
+
+combined = list(zip(students,grades))
+
+output = [f"{students} got {grades}" for students,grades in combined]
 
 print(output)
