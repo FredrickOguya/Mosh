@@ -1,31 +1,31 @@
-# 🧠 Challenge: Combine Book Details
-# You're given three lists:
+# 🧠 Challenge 1: Combine and Filter High Scorers
+# You're given two lists:
 
 # python
-# Copy code
-# titles = ["1984", "To Kill a Mockingbird", "The Great Gatsby"]
-# authors = ["George Orwell", "Harper Lee", "F. Scott Fitzgerald"]
-# years = [1949, 1960, 1925]
+# Copy
+# Edit
+# students = ["Fred", "Liam", "Alice", "Brian", "Nina"]
+# scores = [92, 67, 85, 43, 78]
 # 🎯 Goal:
-# Use zip() and a list comprehension to generate the following formatted list:
+# Use zip() and a list comprehension to generate a list of only the students who scored more than 70, formatted like:
 
 # python
-# Copy code
-# [
-#   "1984 by George Orwell (1949)",
-#   "To Kill a Mockingbird by Harper Lee (1960)",
-#   "The Great Gatsby by F. Scott Fitzgerald (1925)"
-# ]
+# Copy
+# Edit
+# ["Fred scored 92", "Alice scored 85", "Nina scored 78"]
 # 🔧 Hints:
-# Zip the three lists together.
+# Use zip() to pair students with scores.
 
-# Use an f-string inside the list comprehension.
+# Use an if condition inside the list comprehension.
 
-titles = ["1984", "To Kill a Mockingbird", "The Great Gatsby"]
-authors = ["George Orwell", "Harper Lee", "F. Scott Fitzgerald"]
-years = [1949, 1960, 1925]
+# Use an f-string to format.
 
 
-output=[f"{title} by {writer} ({year})" for title, writer,year in zip(titles,authors,years)]
+students = ["Fred", "Liam", "Alice", "Brian", "Nina"]
+scores = [92, 67, 85, 43, 78]
+
+combined = zip(students, scores)
+
+output = [f"{student} scored {score}" for student,score in combined]
 
 print(output)
