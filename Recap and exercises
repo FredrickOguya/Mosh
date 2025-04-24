@@ -1,11 +1,12 @@
-# 🎯 Problem:
-# You’re given a list of temperatures in Celsius:
+# Use nested list comprehension to square every number in the matrix below.
 
 
-temps_c = [0, 20, 37, 100]
-# Use a list comprehension to convert them to Fahrenheit
-# 📌 Formula: F = (C * 9/5) + 32
+matrix = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+]
 
-temps_F = [(C * 9/5)+32 for C in temps_c]
+squared = [x**2 for row in matrix for x in row]
 
-print(temps_F)
+print(squared)
