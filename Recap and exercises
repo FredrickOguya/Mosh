@@ -1,12 +1,24 @@
-# Use nested list comprehension to square every number in the matrix below.
+# Try this challenge:
 
+# students = ['Fred', 'Liam', 'Alice']
+# grades = ['B', 'A', 'C']
+# Use zip() to:
 
-matrix = [
-    [1, 2],
-    [3, 4],
-    [5, 6]
-]
+# Combine them into pairs
 
-squared = [x**2 for row in matrix for x in row]
+students = ['Fred', 'Liam', 'Alice']
+grades = ['B', 'A', 'C']
 
-print(squared)
+combined = list(zip(students,grades))
+
+print(combined)
+
+# Then, use a list comprehension to turn them into strings like:
+
+# python
+# Copy code
+# ["Fred got B", "Liam got A", "Alice got C"]
+
+sentence = [f"{student} got {grade} "for student,grade in combined]
+
+print(sentence)
