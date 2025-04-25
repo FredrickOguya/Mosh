@@ -1,80 +1,65 @@
-# 🧠 Mega Comprehension Challenge
-# You're given a list of people with their name, age, and favorite fruit:
+# ✅ Challenge 1: Add & Remove
+# Start with this list:
 
 
+fruits = ["apple", "banana"]
+#Tasks:
 
-# 🎯 Your Tasks:
-# ✅ List Comprehension
-# Get a list of names of people who are 18 or older.
+# Add "orange" at the end.
 
-# ✅ Set Comprehension
-# Get a set of unique favorite fruits, all in uppercase.
+fruits.append("orange")
 
-# ✅ Dictionary Comprehension
-# Create a dictionary that maps each name to their age only if the age is 18 or above.
+# Insert "mango" at index 1.
 
-# ✅ Generator Expression
-# Build a generator that yields each person’s age squared, one at a time.
+fruits.insert(1,"mango")
 
-# ✍️ Try It Out:
-# Here’s the starting point:
+# Remove "banana".
+
+fruits.remove("banana")
+
+# Print the final list.
+
+print(fruits)
+
+# ✅ Challenge 2: Find & Count
+# Use this list:
 
 # python
 # Copy code
-# people = [
-#     ("Alice", 24, "apple"),
-#     ("Bob", 17, "banana"),
-#     ("Eve", 30, "apple"),
-#     ("Tom", 15, "mango"),
-#     ("Liam", 28, "banana")
-# ]
+# scores = [88, 92, 75, 88, 100]
+# Tasks:
 
-# # 1. List of adult names
-# adults = [name for name, age, fruit in people if age >= 18]
+# Check if 88 is in the list.
 
-# # 2. Set of favorite fruits in uppercase
-# fruits = {fruit.upper() for _, _, fruit in people}
+# Find the index of 75.
 
-# # 3. Dictionary of name:age for adults
-# age_dict = {name: age for name, age, _ in people if age >= 18}
+# Count how many times 88 appears.
 
-# # 4. Generator for age squared
-# age_squared_gen = (age**2 for _, age, _ in people)
+# ✅ Challenge 3: Sorting
+# python
+# Copy code
+# nums = [5, 2, 9, 1, 7]
+# Tasks:
 
-# print("Adults:", adults)
-# print("Fruits:", fruits)
-# print("Adult Ages Dict:", age_dict)
-# print("Age Squared:")
-# for age_sq in age_squared_gen:
-#     print(age_sq)
+# Sort the list in ascending order.
 
-people = [
-    ("Alice", 24, "apple"),
-    ("Bob", 17, "banana"),
-    ("Eve", 30, "apple"),
-    ("Tom", 15, "mango"),
-    ("Liam", 28, "banana")
-]
+# Then sort it in descending order.
 
-# 1. List of adult names
-adults =[name for name,age,fruit in people if age>= 18]
+# ✅ Challenge 4: Lambda + Map
+# python
+# Copy code
+# numbers = [1, 2, 3, 4, 5]
+# Task:
+# Use map() and a lambda function to create a new list where each number is doubled.
 
-print(adults)
+# ✅ Challenge 5: Zip Combo
+# python
+# Copy code
+# names = ["Alice", "Bob", "Eve"]
+# roles = ["Leader", "Tester", "Developer"]
+# Task:
+# Use zip() and list comprehension to format:
 
-# 2. Set of favorite fruits in uppercase
-
-fav_fruits = {fruit.upper() for name,age,fruit in people}
-print(fav_fruits)
-
-# 3. Dictionary of name:age for adults
-
-adult_dict = {name:age for name,age,fruit in people if age>=18}
-
-print(adult_dict)
-
-# 4. Generator for age squared
-
-age_squared = (age**2 for name,age,fruit in people)
-
-for age in age_squared:
-    print(age)
+# python
+# Copy code
+# ["Alice is the Leader", "Bob is the Tester", "Eve is the Developer"]
