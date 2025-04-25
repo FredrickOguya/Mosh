@@ -1,15 +1,80 @@
-# Challenge 2: Generator Expression
-# Create a generator expression that yields the cubes of numbers from 1 to 5.
+# 🧠 Mega Comprehension Challenge
+# You're given a list of people with their name, age, and favorite fruit:
+
+
+
+# 🎯 Your Tasks:
+# ✅ List Comprehension
+# Get a list of names of people who are 18 or older.
+
+# ✅ Set Comprehension
+# Get a set of unique favorite fruits, all in uppercase.
+
+# ✅ Dictionary Comprehension
+# Create a dictionary that maps each name to their age only if the age is 18 or above.
+
+# ✅ Generator Expression
+# Build a generator that yields each person’s age squared, one at a time.
+
+# ✍️ Try It Out:
+# Here’s the starting point:
 
 # python
 # Copy code
-# # Your code here
+# people = [
+#     ("Alice", 24, "apple"),
+#     ("Bob", 17, "banana"),
+#     ("Eve", 30, "apple"),
+#     ("Tom", 15, "mango"),
+#     ("Liam", 28, "banana")
+# ]
 
-# # To test:
-# for cube in cubes_gen:
-#     print(cube)
+# # 1. List of adult names
+# adults = [name for name, age, fruit in people if age >= 18]
 
-cubes_gen = (x**3 for x in range(1,6))
+# # 2. Set of favorite fruits in uppercase
+# fruits = {fruit.upper() for _, _, fruit in people}
 
-for cube in cubes_gen:
-    print(cube)
+# # 3. Dictionary of name:age for adults
+# age_dict = {name: age for name, age, _ in people if age >= 18}
+
+# # 4. Generator for age squared
+# age_squared_gen = (age**2 for _, age, _ in people)
+
+# print("Adults:", adults)
+# print("Fruits:", fruits)
+# print("Adult Ages Dict:", age_dict)
+# print("Age Squared:")
+# for age_sq in age_squared_gen:
+#     print(age_sq)
+
+people = [
+    ("Alice", 24, "apple"),
+    ("Bob", 17, "banana"),
+    ("Eve", 30, "apple"),
+    ("Tom", 15, "mango"),
+    ("Liam", 28, "banana")
+]
+
+# 1. List of adult names
+adults =[name for name,age,fruit in people if age>= 18]
+
+print(adults)
+
+# 2. Set of favorite fruits in uppercase
+
+fav_fruits = {fruit.upper() for name,age,fruit in people}
+print(fav_fruits)
+
+# 3. Dictionary of name:age for adults
+
+adult_dict = {name:age for name,age,fruit in people if age>=18}
+
+print(adult_dict)
+
+# 4. Generator for age squared
+
+age_squared = (age**2 for name,age,fruit in people)
+
+for age in age_squared:
+    print(age)
