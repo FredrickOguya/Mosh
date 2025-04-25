@@ -41,15 +41,16 @@ print(scores.index(75))
 print(scores.count(88))
 
 # ✅ Challenge 3: Sorting
-# python
-# Copy code
-# nums = [5, 2, 9, 1, 7]
+
+nums = [5, 2, 9, 1, 7]
 # Tasks:
 
 # Sort the list in ascending order.
 
-# Then sort it in descending order.
+nums.sort()
 
+# Then sort it in descending order.
+nums.sort(reverse=True)
 # ✅ Challenge 4: Lambda + Map
 # python
 # Copy code
