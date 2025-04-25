@@ -1,31 +1,17 @@
-# 🧠 Challenge 1: Combine and Filter High Scorers
-# You're given two lists:
-
+#  Quick Challenge
 # python
-# Copy
-# Edit
-# students = ["Fred", "Liam", "Alice", "Brian", "Nina"]
-# scores = [92, 67, 85, 43, 78]
-# 🎯 Goal:
-# Use zip() and a list comprehension to generate a list of only the students who scored more than 70, formatted like:
+# Copy code
+# # Given a list of tuples:
+# people = [("Alice", 24), ("Bob", 19), ("Eve", 30)]
 
-# python
-# Copy
-# Edit
-# ["Fred scored 92", "Alice scored 85", "Nina scored 78"]
-# 🔧 Hints:
-# Use zip() to pair students with scores.
+# # 🎯 Goal: Create a list of just the names in uppercase.
 
-# Use an if condition inside the list comprehension.
+# # ✅ Try it:
+# names_upper = [name.upper() for name, age in people]
+# print(names_upper)  # ['ALICE', 'BOB', 'EVE']
 
-# Use an f-string to format.
+people = [("Alice", 24), ("Bob", 19), ("Eve", 30)]
 
+uppercase_name = [name.upper() for name,age in people]
 
-students = ["Fred", "Liam", "Alice", "Brian", "Nina"]
-scores = [92, 67, 85, 43, 78]
-
-combined = zip(students, scores)
-
-output = [f"{student} scored {score}" for student,score in combined]
-
-print(output)
+print(uppercase_name)
