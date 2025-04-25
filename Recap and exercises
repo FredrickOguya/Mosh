@@ -1,11 +1,15 @@
-# Challenge 1: Set Comprehension
-# Given this list, create a set of the first letters in uppercase, without duplicates.
+# Challenge 2: Generator Expression
+# Create a generator expression that yields the cubes of numbers from 1 to 5.
 
+# python
+# Copy code
+# # Your code here
 
-words = ["apple", "banana", "avocado", "blueberry", "cherry", "apple"]
+# # To test:
+# for cube in cubes_gen:
+#     print(cube)
 
-# Your code here
+cubes_gen = (x**3 for x in range(1,6))
 
-first_uppercase = {name[0].upper() for name in words}
-
-print(first_uppercase)
+for cube in cubes_gen:
+    print(cube)
