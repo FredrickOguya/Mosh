@@ -1,30 +1,11 @@
-# 🧠 Challenge: Filter Adults Only
-# You're given a list of people with their ages:
-
-# python
-# Copy code
-# people = [("Alice", 24), ("Bob", 17), ("Eve", 30), ("Tom", 15)]
-# 🎯 Goal:
-# Use list comprehension to create a list of names of people who are 18 or older (i.e., adults).
-
-# ✅ Expected Output:
-# python
-# Copy code
-# ['Alice', 'Eve']
-# 🔧 Your Task:
-# Use a list comprehension with a conditional to filter only the adults and return their names.
-
-# Give it a try! Let me know if you want the solution afterward.
+# Challenge 1: Set Comprehension
+# Given this list, create a set of the first letters in uppercase, without duplicates.
 
 
-people = [("Alice", 24), ("Bob", 17), ("Eve", 30), ("Tom", 15)]
+words = ["apple", "banana", "avocado", "blueberry", "cherry", "apple"]
 
+# Your code here
 
-older = [name for name,age in people if age>17]
+first_uppercase = {name[0].upper() for name in words}
 
-print(older)
-
-
-
-
-# #
+print(first_uppercase)
