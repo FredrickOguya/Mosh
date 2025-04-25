@@ -24,16 +24,21 @@ print(fruits)
 # ✅ Challenge 2: Find & Count
 # Use this list:
 
-# python
-# Copy code
-# scores = [88, 92, 75, 88, 100]
+
+scores = [88, 92, 75, 88, 100]
 # Tasks:
 
 # Check if 88 is in the list.
 
+print(88 in scores)
+
 # Find the index of 75.
 
+print(scores.index(75))
+
 # Count how many times 88 appears.
+
+print(scores.count(88))
 
 # ✅ Challenge 3: Sorting
 # python
