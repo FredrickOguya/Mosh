@@ -1,17 +1,30 @@
-#  Quick Challenge
+# 🧠 Challenge: Filter Adults Only
+# You're given a list of people with their ages:
+
 # python
 # Copy code
-# # Given a list of tuples:
-# people = [("Alice", 24), ("Bob", 19), ("Eve", 30)]
+# people = [("Alice", 24), ("Bob", 17), ("Eve", 30), ("Tom", 15)]
+# 🎯 Goal:
+# Use list comprehension to create a list of names of people who are 18 or older (i.e., adults).
 
-# # 🎯 Goal: Create a list of just the names in uppercase.
+# ✅ Expected Output:
+# python
+# Copy code
+# ['Alice', 'Eve']
+# 🔧 Your Task:
+# Use a list comprehension with a conditional to filter only the adults and return their names.
 
-# # ✅ Try it:
-# names_upper = [name.upper() for name, age in people]
-# print(names_upper)  # ['ALICE', 'BOB', 'EVE']
+# Give it a try! Let me know if you want the solution afterward.
 
-people = [("Alice", 24), ("Bob", 19), ("Eve", 30)]
 
-uppercase_name = [name.upper() for name,age in people]
+people = [("Alice", 24), ("Bob", 17), ("Eve", 30), ("Tom", 15)]
 
-print(uppercase_name)
+
+older = [name for name,age in people if age>17]
+
+print(older)
+
+
+
+
+# #
