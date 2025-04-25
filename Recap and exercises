@@ -52,11 +52,12 @@ nums.sort()
 # Then sort it in descending order.
 nums.sort(reverse=True)
 # ✅ Challenge 4: Lambda + Map
-# python
-# Copy code
-# numbers = [1, 2, 3, 4, 5]
+
+numbers = [1, 2, 3, 4, 5]
 # Task:
 # Use map() and a lambda function to create a new list where each number is doubled.
+
+doubled_numbers = list(map(lambda x:x*2,numbers))
 
 # ✅ Challenge 5: Zip Combo
 # python
