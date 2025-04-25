@@ -60,13 +60,13 @@ numbers = [1, 2, 3, 4, 5]
 doubled_numbers = list(map(lambda x:x*2,numbers))
 
 # ✅ Challenge 5: Zip Combo
-# python
-# Copy code
-# names = ["Alice", "Bob", "Eve"]
-# roles = ["Leader", "Tester", "Developer"]
+
+names = ["Alice", "Bob", "Eve"]
+roles = ["Leader", "Tester", "Developer"]
 # Task:
 # Use zip() and list comprehension to format:
 
-# python
-# Copy code
+output = list(f"{name} is the {role}" for name,role in zip(names,roles))
+
+print(output)
 # ["Alice is the Leader", "Bob is the Tester", "Eve is the Developer"]
