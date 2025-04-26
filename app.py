@@ -1,5 +1,7 @@
-# class: blueprint for creating new objects
-# object: instance of a class
+class Point:
+    def draw(self):
+        print("draw")
 
-# class: Human
-# objects: John, Mary, Jack
+point = Point()
+print(type(point))
+print(isinstance(point,int))
