@@ -1,11 +1,9 @@
+def calculate_xfactor(age):
+    if age <= 0:
+        raise ValueError("Age cannot be 0 or less.")
+    return 10/ age
+
 try:
-    with open("app.py") as file:
-        print("File opened.")
-    age = int(input("Age:"))
-    exfactor = 10 / age
-except (ValueError, ZeroDivisionError):
-    print("You didn't enter a valid age.")
-else:
-    print("No exceptions were thrown")
-
-
+    calculate_xfactor(-1)
+except ValueError as error:
+    print(error)
