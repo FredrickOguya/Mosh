@@ -9,6 +9,13 @@ class Animal:
 # Animal: Parent, Base
 # Mammal: Child, Sub
 class Mammal(Animal):
+    def __init__(self):
+        print("Animal Constructor")
+        print("Mammal constructor")
+        self.weight = 2
+        super().__init__()
+
+
     def walk(self):
         print("walk")
 
@@ -22,6 +29,5 @@ class Fish(Animal):
 
 m = Mammal()
 
-print(isinstance(m,object))
-o = object()
-print(issubclass(Mammal,Animal))
+print(m.age)
+print(m.weight)
