@@ -21,5 +21,7 @@ class Fish(Animal):
         print("swim")
 
 m = Mammal()
-m.eat()
-print(m.age)
+
+print(isinstance(m,object))
+o = object()
+print(issubclass(Mammal,Animal))
