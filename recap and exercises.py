@@ -1,18 +1,9 @@
-# 🧠 Exercise 1: Handle Division by Zero
-# Task:
-# Write a program that takes two numbers from the user and divides them. Handle the case where the denominator is zero.
+class Book:
+    def __init__(self,title,author):
+        self.title = title
+        self.author = author
 
-# Template:
+book1 = Book("The Alchemist", "Paulo Coelho")
 
-# python
-# Copy code
-# # Your code here
-
-
-# Add try-except to handle division
-try:
-    num1 = int(input("Enter numerator: "))
-    num2 = int(input("Enter denominator: "))
-    result = num1/num2
-except ZeroDivisionError:
-    print("the second number canot be zero")
+print("Title: ", book1.title)
+print("Author: ", book1.author)
