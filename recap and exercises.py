@@ -1,10 +1,10 @@
-class Cat:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    def __len__(self):
-        return self.age
+class Movie:
+    def __init__(self,title,year):
+        self.title = title
+        self.year = year
+
+    def __str__(self):
+        return f"{self.title} ({self.year})"
     
-cat = Cat("whiskers", 5)
-print(len(cat))
-    
+movie = Movie("Inception", 2010)
+print(movie)
