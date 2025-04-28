@@ -1,9 +1,12 @@
-class Student:
-    school_name = "Greenwood High"
-    def __init__(self,name,grade):
+class Dog:
+    species = "Canine"
+    def __init__(self,name,breed):
         self.name= name
-        self.grade = grade
+        self.breed = breed
     def display_info(self):
-        print(f"Name: {Student.name}")
-        print(f"Grade: {Student.grade}")
-        print(f"School: {Student.school_name}")
+        print(f"Name: {self.name}")
+        print(f"Breed: {self.breed}")
+        print(f"Species: {Dog.species}")
+
+dog1 = Dog("Buddy", "Labrador")
+dog1.display_info()
