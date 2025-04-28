@@ -1,12 +1,12 @@
-class Book:
-    def __init__(self,title,author):
-        self.title = title
-        self.author = author
-    def display_info(self):
-        print(f"'{self.title}' by {self.author}")
+# Instance Variables
 
-book1 = Book("The Alchemist", "Paulo Coelho")
 
-print("Title: ", book1.title)
-print("Author: ", book1.author)
-book1.display_info()
+
+class Dog:
+    def __init__(self, name):
+        self.name = name  # instance variable
+dog1 = Dog("Buddy")
+dog2 = Dog("Max")
+
+print(dog1.name)  # Buddy
+print(dog2.name)  # Max
