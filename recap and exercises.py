@@ -1,18 +1,16 @@
-class Movie:
-    def __init__(self, title,year):
-        self.title = title
-        self.year = year
+class Point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
 
-    def __eq__(self, other):
-        return self.year == other.year
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
     
-    def __lt__(self, other):
-        return self.year < other.year
+    def __str__(self):
+        return f"({self.x}, {self.y})"
     
+p1 = Point(2,3)
+p2 = Point(4,1)
+result = p1 + p2
 
-movie1 = Movie("Inception", 2010)
-movie2 = Movie("The Matrix", 1999)
-
-print(movie1 == movie2)
-print(movie1 < movie2)
-print(movie2<movie1)
+print(result)
