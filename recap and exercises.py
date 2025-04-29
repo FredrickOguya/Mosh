@@ -1,19 +1,18 @@
-class Student:
-    def __init__(self,name):
-        self.name = name
-        self.__grades = []
+class Temperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
 
-    def add_grade(self,grade):
-        self.__grades.append(grade)
+    @property
+    def celsius(self):
+        return self.__celsius
     
-    def get_average(self):
-        if self.__grades:
-            return sum(self.__grades) / len(self.__grades)
-        return 0
-    
-s = Student("Amina")
-s.add_grade(85)
-s.add_grade(90)
-s.add_grade(95)
-
-print(s.get_average())
+    @celsius.setter
+    def celsius(self,value):
+        if self.__celsius >= -273.15:
+            self.__celsius = value
+        else:
+            raise ValueError("Temperature can't go below absolute zero")
+        
+    @property
+    def fahrenheit(self):
+        return self.__celsius * 9/5 + 32
