@@ -1,18 +1,12 @@
-class Temperature:
-    def __init__(self, celsius):
-        self._celsius = celsius
-
-    @property
-    def celsius(self):
-        return self.__celsius
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
     
-    @celsius.setter
-    def celsius(self,value):
-        if self.__celsius >= -273.15:
-            self.__celsius = value
-        else:
-            raise ValueError("Temperature can't go below absolute zero")
-        
-    @property
-    def fahrenheit(self):
-        return self.__celsius * 9/5 + 32
+    def introduce(self):
+        print(f"My name is {self.name}, I'm {self.age} years old.")
+
+class Student(Person):
+    def __init__(self,name, age, school):
+        super().__init__(name,age)
+        self.school = school
