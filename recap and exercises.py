@@ -1,24 +1,14 @@
-class Person:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    def introduce(self):
-        print(f"My name is {self.name}, I'm {self.age} years old.")
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter the second number: "))
 
-class Student(Person):
-    def __init__(self,name,age, school):
-        super().__init__(name,age)
-        self.school = school
-    
-    def introduce(self):
-        super().introduce()
-        print(f"I study at {self.school}")
+    soln = num1/num2
 
-class GraduateStudent(Student):
-    def __init__(self,name,age,school,course):
-        super().__init__(name,age,school)
-        self.course = course
+    print(f"{num1}/{num2} = {soln}")
+except ValueError:
+    print("Enter a valid number")
+except ZeroDivisionError:
+    print("The second number cannot be zero")
 
-    def introduce(self):
-        super().introduce()
-        print(f"I am persuing a {self.course}.")
+finally:
+    print("program successfull")
