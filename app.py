@@ -1,10 +1,11 @@
-class Animal:
-    def eat(self):
-        print("eat")
-
-class Bird(Animal):
+class Flyer:
     def fly(self):
-        print("fly")
+        pass
 
-class Chicken(Bird):
+class Swimmer:
+    def swim(self):
+        pass
+
+class FlyingFish(Flyer, Swimmer):
     pass
+
