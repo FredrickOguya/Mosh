@@ -1,39 +1,23 @@
 from abc import ABC, abstractmethod
 
-class InvalidOperationError(Exception):
-    pass
-
-class Stream(ABC):
-    def __init__(self):
-        self.opened = False
-
-    def open(self):
-        if self.opened:
-            raise InvalidOperationError("Stream is already open")
-        self.opened = True
-
-    def close(self):
-        if not self.opened:
-            raise InvalidOperationError("Stream is already close")
-        self.opened = False
-    
+class UIControl(ABC):
     @abstractmethod
-    def read(self):
+    def draw(self):
         pass
 
+class TextBox(UIControl):
+    def draw(self):
+        print("TextBox")
 
+class DropDownList(UIControl):
+    def draw(self):
+        print("DropDownList")
 
-class FileStream(Stream):
-    def read(self):
-        print("Reading data from a file")
+def draw(controls):
+    for control in controls:
+        control.draw()
 
-class NetworkStream(Stream):
-    def read(self):
-        print("Reading data from a network")
+ddl = DropDownList()
+textbox = TextBox()
+draw([ddl, textbox])
 
-class MemoryStream(Stream):
-    def read(Self):
-        print("Reading data from memory")
-
-stream = MemoryStream()
-stream.open()
