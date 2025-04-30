@@ -1,23 +1,12 @@
-from abc import ABC, abstractmethod
+class Text(str):
+    def duplicate(self):
+        return self + self
 
-class UIControl(ABC):
-    @abstractmethod
-    def draw(self):
-        pass
 
-class TextBox(UIControl):
-    def draw(self):
-        print("TextBox")
-
-class DropDownList(UIControl):
-    def draw(self):
-        print("DropDownList")
-
-def draw(controls):
-    for control in controls:
-        control.draw()
-
-ddl = DropDownList()
-textbox = TextBox()
-draw([ddl, textbox])
-
+class TrackableList(list):
+    def append(self,object):
+        print("Append called")
+        super().append(object)
+        
+list = TrackableList()
+list.append("1")
