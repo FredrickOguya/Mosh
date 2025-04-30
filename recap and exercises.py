@@ -23,6 +23,10 @@ class Shape(ABC):
     def area(self):
         pass
 
+    @abstractmethod
+    def describe(self):
+        pass
+
 class Rectangle(Shape):
     def __init__(self, width,height):
         self.width = width
@@ -31,12 +35,18 @@ class Rectangle(Shape):
     def area(self):
         return self.width * self.height
     
+    def describe(self):
+        return f"I am a Rectangle of width {self.width} and height {self.height}"
+    
 class Circle(Shape):
     def __init__(self,radius):
         self.radius = radius
     
     def area(self):
         return math.pi * (self.radius ** 2)
+    
+    def describe(self):
+        return f"I am a Circle of radius {self.radius}"
         
 shapes = [
     Rectangle(4,5),
@@ -45,3 +55,17 @@ shapes = [
  
 for shape in shapes:
     print(f"Area: {shape.area()}")
+
+
+# polymorphism in action
+
+shapes = [
+    Rectangle(3,4),
+    Circle(5),
+    Rectangle(6, 7)
+]
+
+for shape in shapes:
+    print(shape.describe())
+    print(f"My are is: {shape.area()}")
+    print("-" * 30)
