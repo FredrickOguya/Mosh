@@ -1,4 +1,6 @@
-import sales
-import sys
+from ecommerce.sales import calc_tax,calc_shipping
+from ecommerce import sales
 
-print(sys.path)
+sales.calc_shipping
+
+calc_tax
