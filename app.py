@@ -1,7 +1,4 @@
-from collections import namedtuple
+from sales import calc_shipping, calc_tax
 
-namedtuple("Point", ["x", "y"])
-
-
-
-print(p1 == p2)
+calc_shipping()
+calc_tax()
