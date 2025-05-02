@@ -1,7 +1,7 @@
-import csv
+import json
+from pathlib import Path
 
-with open("data.csv")as file:
-    reader = csv.reader(file)
-    # print(list(reader))
-    for row in reader:
-        print(row)
+
+data = Path("movies.json").read_text()
+movies = json.loads(data)
+print(movies[0]["title"])
