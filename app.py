@@ -1,17 +1,13 @@
 from pathlib import Path
-from time import ctime
-import shutil
+from zipfile import ZipFile
 
-source = Path("ecommerce/__init__.py")
-target = Path()/ "__init__.py"
+# with ZipFile("files.zip","w") as zip:
+#     for path in Path("ecommerce").rglob("*.*"):
+#         zip.write(path)
 
-target.write_text(source.read_text())
-
-# path.exists()
-# path.rename("init.txt")
-# path.unlink()
-print(ctime(path.stat().st_ctime))
-
-# print(path.read_text())
-# path.write_text("...")
-# path.write_bytes()
+with ZipFile("files.zip") as zip:
+    print(zip.namelist())
+    info = zip.getinfo("ecommerce/__init__.py")
+    print(info.file_size)
+    print(info.compress_size)
+    zip.extractall("extract")
