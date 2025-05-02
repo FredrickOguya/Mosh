@@ -1,11 +1,12 @@
+from datetime import datetime
 import time
 
-def send_emails():
-    for i in range(10000):
-        pass
+dt1 = datetime(2018, 1, 1)
+dt2 = datetime.now()
+datetime.strptime("2018/01/01", "%Y/%M/%d")
+dt = datetime.fromtimestamp(time.time())
 
-start = time.time()
-send_emails()
-end = time.time()
-duration = end - start
-print(duration)
+print(f"{dt.year}/{dt.month}")
+print(dt.strftime("%Y/%m"))
+
+print(dt2 > dt1)
