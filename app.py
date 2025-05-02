@@ -1,12 +1,9 @@
-from datetime import datetime
-import time
-
-dt1 = datetime(2018, 1, 1)
+from datetime import datetime, timedelta
+dt1 = datetime(2018, 1, 1) + timedelta(days=1,seconds=1)
 dt2 = datetime.now()
-datetime.strptime("2018/01/01", "%Y/%M/%d")
-dt = datetime.fromtimestamp(time.time())
 
-print(f"{dt.year}/{dt.month}")
-print(dt.strftime("%Y/%m"))
 
-print(dt2 > dt1)
+duration = dt2 - dt1
+print(duration)
+print("days", duration.days)
+print("seconds", duration.total_seconds())
