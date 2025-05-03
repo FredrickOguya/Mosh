@@ -1,24 +1,7 @@
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from pathlib import Path
-from string import Template
-import smtplib
+import sys
 
-template = Template(Path("template.html").read_text())
-
-
-message = MIMEMultipart()
-message["from"] = "Mosh Hamedani"
-message["to"] = "testuser@codewithmosh.com"
-message["subject"] = "This is a test"
-body = template.substitute({"name":"John"})
-message.attach(MIMEText(body, "html"))
-message.attach(MIMEImage(Path("car.jpg").read_bytes()))
-
-with smtplib.SMTP(host="smtp.gmail.com",port=587) as smtp:
-    smtp.ehlo()
-    smtp.starttls()
-    smtp.login("onyangofredrickoguya@gmail.com", "weijods392io3892iw;l,.")
-    smtp.send_message(message)
-    print("sent ...")
+if len(sys.argv) == 1:
+    print("USAGE: pyton3 app.py <password>")
+else:
+    password = sys.argv[1]
+    print("password", password )
