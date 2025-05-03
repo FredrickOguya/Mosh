@@ -1,10 +1,16 @@
 from pathlib import Path
 
-folder = Path('Demo_folder')
-folder.mkdir(exist_ok=True)
+base = Path('projects/demo_project')
+base.mkdir(parents=True,exist_ok=True)
 
-file = folder / 'test.txt'
-file.write_text('Holla')
+notes = base/'notes.txt'
+notes.write_text("This is a note")
 
-file.unlink()
-folder.rmdir()
+readme = base / 'readme.md'
+readme.write_text("#Demo Project")
+
+for items in base.iterdir():
+    print(items.resolve())
+
+readme.rename(base / 'README.md')
+notes.rename(base.parent / 'notes.txt')
