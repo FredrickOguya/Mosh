@@ -1,7 +1,13 @@
-import sys
+import subprocess
 
-if len(sys.argv) == 1:
-    print("USAGE: pyton3 app.py <password>")
-else:
-    password = sys.argv[1]
-    print("password", password )
+try:
+    completed = subprocess.run(["false"],
+                            capture_output=True,
+                            text=True,
+                            check=True)
+    print("args",completed.args)
+    print("returncode", completed.returncode)
+    print("stderr",completed.stderr)
+    print("stdout",completed.stdout)
+except subprocess.CalledProcessError as ex:
+    print(ex)
