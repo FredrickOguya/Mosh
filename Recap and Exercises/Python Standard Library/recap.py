@@ -1,5 +1,15 @@
 import json
 
-with open('data.json') as f:
-    loaded = json.load(f)
-    print(loaded['name'])
+grades = {
+    'Fred':'B',
+    'Christian' : 'A',
+    'Onyango':'A+'
+}
+
+with open('grades.json', 'w') as f:
+    json.dump(grades,f)
+
+
+with open('grades.json') as f:
+    data = json.load(f)
+    print(data)
