@@ -1,4 +1,3 @@
-import zipfile
+import shutil
 
-with zipfile.ZipFile('archive.zip') as zf:
-    zf.extractall('extracted_folder')
+shutil.make_archive('files.zip','zip','projects')
